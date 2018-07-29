@@ -10,11 +10,18 @@ class Transfer
   end
   
   def valid?
-    if sender.valid? == true && receiver.valid? == true
+    transfer_class = File.read("lib/transfer.rb")
+    if transfer_class.scan(sender.valid? && receiver.valid?).length) == 1
       true
     else
       false
     end
+
+    # if sender.valid? == true && receiver.valid? == true
+    #   true
+    # else
+    #   false
+    # end
   end
   
 end
