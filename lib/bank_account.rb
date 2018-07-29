@@ -14,4 +14,10 @@ class BankAccount
   def display_balance
     "Your Balance is $#{@balance}."
   end
+  
+  def valid?
+    if @staus == "open"
+      true
+    end
+  end
 end
